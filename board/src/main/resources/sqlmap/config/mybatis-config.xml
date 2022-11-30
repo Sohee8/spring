@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+                                "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<!-- 마이바티스의 작동 규칙정의 -->
+	<settings>
+		<setting name="cacheEnabled" value="false" />
+		<setting name="useGeneratedKeys" value="true" />
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+
+	<typeAliases>
+		<typeAlias type="com.heaven.mvc.board.domain.BoardVO" alias="boardVO" />
+		<!-- 패키지명까지 써야하는 불편함을 해소하기 위해 alias 사용하여 간단한 이름으로 대체할 수 있음. -->
+	</typeAliases>
+
+</configuration>
