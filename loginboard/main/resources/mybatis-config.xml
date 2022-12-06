@@ -4,17 +4,17 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-	<settings>
-		<setting name="cacheEnabled" value="false" />
-		<setting name="useGeneratedKeys" value="true" />
-		<setting name="mapUnderscoreToCamelCase" value="true" />
-	</settings>
+<!-- 마이바티스의 작동 규칙 정의 -->
+<settings>
+<setting name="cacheEnabled" value="false"/>
+<setting name="useGeneratedKeys" value="true"/>
+<setting name="mapUnderscoreToCamelCase" value="true"/>
+</settings>
 
-	<typeAliases>
-		<typeAlias type="com.korea.myboard.vo.MemberVO" alias="memberVO" />
-		<typeAlias type="com.korea.myboard.vo.BoardVO" alias="boardVO" />
-		<typeAlias type="com.korea.myboard.vo.SearchCriteria" alias="SearchCriteria" />		
-	<!--<typeAlias type="com.korea.myboard.vo.replyVO" alias="replyVO" /> -->
-	</typeAliases>
+<typeAliases>
+ <typeAlias type="com.korea.myboard.vo.MemberVO" alias="memberVO"/>
+ <typeAlias type="com.korea.myboard.vo.BoardVO" alias="boardVO"/>
+ <typeAlias type="com.korea.myboard.vo.ReplyVO" alias="replyVO"/> 
+</typeAliases>
 
-</configuration>	
+</configuration>

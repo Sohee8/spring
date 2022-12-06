@@ -5,30 +5,32 @@
  drop table mp_board purge;
 
 
-create table mp_board(
- bno number primary key,
- title varchar2(100) not null,
- content varchar2(1000) not null,
- writer varchar2(100) not null,
- regdate date default sysdate);
-  
- 
- 
+CREATE TABLE MP_BOARD(
+BNO NUMBER primary key,
+TITLE VARCHAR2(100) NOT null,
+content varchar2(1000) not null,
+writer varchar2(100) not null,
+addr varchar2(100),
+regdate date default sysdate);
+
+
+
 create table mp_member(
- userid varchar2(40) primary key,
- userpass varchar2(100) not null,
- username varchar2(50),
- regdate date default sysdate);
-   
- 
- 
+userid varchar2(40) primary key,
+userpass varchar2(100) not null,
+username varchar2(50),
+regdate date default sysdate);
+
+
+
 create table mp_reply(
- bno number not null,
- rno number not null,
- content varchar2(1000) not null,
- writer varchar2(50) not null,
- regdate date default sysdate,
- primary key(bno, rno));
+bno number not null,
+rno number not null,
+content varchar2(1000) not null,
+writer varchar2(50) not null,
+regdate date default sysdate,
+primary key(bno,rno));
+ 
  
  
  ALTER TABLE MP_REPLY ADD CONSTRAINT MP_REPLY_BNO FOREIGN KEY(BNO) REFERENCES MP_BOARD(BNO);
