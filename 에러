@@ -1,0 +1,18 @@
+
+//ORACLE연결 에러
+### Error updating database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: 
+Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: The Network Adapter could not establish the connection
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: 
+The Network Adapter could not establish the connection
+
+원인
+:root-context.xml의 oracle연결관련 bean에 입력한 오라클의SID 이름이 달라서 생긴문제
+    <property name="url" value="jdbc:oracle:thin:@localhost:1521/"이름"/>
+    
+해결방법
+: cmd에 lsnrctl services를 입력하여 SID NAME 확인하기
+ 
+    서비스 요약 중에서 "이름" 서비스는 1개의 인스턴스를 가집니다.
+    "이름"이 SID
+
+//
